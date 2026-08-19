@@ -591,7 +591,7 @@
       gap: 15px;
       align-items: start;
       padding: 18px;
-      background: #fff;
+      background: #f8fbfe;
       border: 1px solid #dce4ec;
       border-radius: 12px;
       box-shadow: 0 2px 8px #0f172a0a;
@@ -604,19 +604,27 @@
       width: 46px;
       height: 46px;
       color: #fff;
-      background: #1e40af;
+      background: #324eaf;
       border-radius: 999px;
       font-size: 16px;
       font-weight: 850;
       line-height: 1;
     }
 
+    .abstractContributionCard:nth-child(2) {
+      background: #fafcf9;
+    }
+
     .abstractContributionCard:nth-child(2) .abstractContributionIndex {
-      background: #0f766e;
+      background: #186832;
+    }
+
+    .abstractContributionCard:nth-child(3) {
+      background: #fbfafd;
     }
 
     .abstractContributionCard:nth-child(3) .abstractContributionIndex {
-      background: #b45309;
+      background: #52228f;
     }
 
     .abstractContributionCard h3 {
@@ -926,25 +934,27 @@
       min-height: 220px;
       padding: 24px;
       text-align: left;
-      background: #fff;
+      background: #f9fbf7;
       border: 1px solid #dce4ec;
-      border-top: 4px solid #2563eb;
+      border-top: 4px solid #0e6f6d;
       border-radius: 12px;
       box-shadow: 0 2px 8px #0f172a0a;
     }
 
     .architectureFeatureCard:nth-child(2) {
-      border-top-color: #0f766e;
+      background: #f8fbfe;
+      border-top-color: #324eaf;
     }
 
     .architectureFeatureCard:nth-child(3) {
-      border-top-color: #b45309;
+      background: #fbfafd;
+      border-top-color: #66558f;
     }
 
     .architectureFeatureTag {
       display: inline-block;
       margin-bottom: 12px;
-      color: #1e40af;
+      color: #0e6f6d;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-size: 12px;
@@ -953,11 +963,11 @@
     }
 
     .architectureFeatureCard:nth-child(2) .architectureFeatureTag {
-      color: #0f766e;
+      color: #324eaf;
     }
 
     .architectureFeatureCard:nth-child(3) .architectureFeatureTag {
-      color: #b45309;
+      color: #66558f;
     }
 
     .architectureFeatureCard h3 {
@@ -1020,26 +1030,34 @@
       margin: 0 auto;
     }
 
-    .trainingStageCard {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
-      gap: 18px;
-      align-items: start;
-      padding: 22px 24px;
-      background: #fff;
-      border: 1px solid #dce4ec;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px #0f172a0a;
-    }
+.trainingStageCard {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 22px 24px;
+  background: #f8fbfe;
+  border: 1px solid #dce4ec;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0f172a0a;
+}
 
-    .trainingStageIndex {
+.trainingStageCard:nth-child(2) {
+  background: #fafcf9;
+}
+
+.trainingStageCard:nth-child(3) {
+  background: #fbfafd;
+}
+
+.trainingStageIndex {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       width: 48px;
       height: 48px;
       color: #fff;
-      background: #2563eb;
+      background: #324eaf;
       border-radius: 999px;
       font-size: 20px;
       font-weight: 850;
@@ -1047,11 +1065,11 @@
     }
 
     .trainingStageCard:nth-child(2) .trainingStageIndex {
-      background: #0f766e;
+      background: #186832;
     }
 
     .trainingStageCard:nth-child(3) .trainingStageIndex {
-      background: #b45309;
+      background: #52228f;
     }
 
     .trainingStageCard h3 {
