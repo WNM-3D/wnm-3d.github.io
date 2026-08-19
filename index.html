@@ -144,6 +144,16 @@
       }
     }
 
+    /* Keep the hero background proportional and edge-to-edge on desktop and mobile. */
+    .heroVideo[data-v-e3723c72] {
+      width: 100%;
+      min-width: 0;
+      height: 100%;
+      min-height: 0;
+      object-fit: cover;
+      object-position: center;
+    }
+
     /* Numbered chapter navigation, following the Rhodes-Team-PRTS project page. */
     .navbar[data-v-e3723c72] {
       padding: 0;
@@ -1337,8 +1347,8 @@
       </nav>
       <section class="hero" data-v-e3723c72="" id="top">
         <div class="heroVideoContainer" data-v-e3723c72="">
-          <video autoplay="" class="heroVideo" data-v-e3723c72="" muted="" playsinline="" preload="auto"
-            src="/videos/background3d.mov">
+          <video autoplay="" class="heroVideo" data-v-e3723c72="" loop="" muted="" playsinline="" preload="auto"
+            src="/videos/background.mp4">
           </video>
           <div class="heroVideoOverlay" data-v-e3723c72="">
           </div>
@@ -1992,42 +2002,6 @@
   </div>
   <script>
     (function () {
-      var heroVideo = document.querySelector(".heroVideo");
-      var heroPlaylist = [
-        "/videos/background3d.mov",
-        "/videos/background2d.mp4"
-      ];
-      var heroVideoIndex = 0;
-      var consecutiveVideoErrors = 0;
-
-      function playHeroVideo(index) {
-        if (!heroVideo || !heroPlaylist.length) return;
-        heroVideoIndex = (index + heroPlaylist.length) % heroPlaylist.length;
-        heroVideo.src = heroPlaylist[heroVideoIndex];
-        heroVideo.load();
-        var playRequest = heroVideo.play();
-        if (playRequest && typeof playRequest.catch === "function") {
-          playRequest.catch(function () { });
-        }
-      }
-
-      if (heroVideo) {
-        heroVideo.muted = true;
-        heroVideo.addEventListener("ended", function () {
-          consecutiveVideoErrors = 0;
-          playHeroVideo(heroVideoIndex + 1);
-        });
-        heroVideo.addEventListener("playing", function () {
-          consecutiveVideoErrors = 0;
-        });
-        heroVideo.addEventListener("error", function () {
-          consecutiveVideoErrors += 1;
-          if (consecutiveVideoErrors < heroPlaylist.length) {
-            playHeroVideo(heroVideoIndex + 1);
-          }
-        });
-      }
-
       function scrollToId(id) {
         var target = document.getElementById(id);
         if (!target) return;
