@@ -1694,7 +1694,7 @@
               <div data-v-e3723c72="">
                 <h3 data-v-e3723c72="">Offline A* SFT</h3>
                 <p data-v-e3723c72="">
-                  Stage I jointly learns future visual prediction and action generation from offline A*-expert
+                  Stage-I jointly learns future visual prediction and action generation from offline A*-expert
                   demonstrations. For WNM-3D, the 3D Scene-to-Token Adapter is trained with the world-action backbone,
                   while the VGGT-Ω scene encoder remains frozen.
                 </p>
@@ -1705,7 +1705,7 @@
               <div data-v-e3723c72="">
                 <h3 data-v-e3723c72="">Closed-Loop DAgger-SFT</h3>
                 <p data-v-e3723c72="">
-                  Stage II rolls out the Stage I policy in simulation and queries the A* expert at policy-visited states.
+                  Stage-II rolls out the Stage-I policy in simulation and queries the A* expert at policy-visited states.
                   The resulting trajectory-consistent visual and action corrections form a policy-specific DAgger
                   dataset that mitigates closed-loop covariate shift.
                 </p>
@@ -1716,7 +1716,7 @@
               <div data-v-e3723c72="">
                 <h3 data-v-e3723c72="">Closed-Loop DanceGRPO</h3>
                 <p data-v-e3723c72="">
-                  Stage III starts from the Stage II policy and optimizes stratified counterfactual world-action sample pairs with pairwise multi-stream credit assignment over visual, navigation, and stopping rewards, further refining the joint visual-action policy for closed-loop execution.
+                  Stage-III starts from the Stage-II policy and uses DanceGRPO to optimize groups of counterfactual world-action samples across stratified denoising transitions, with group-relative credit assignment over visual, navigation, and stopping rewards to further refine the policy for closed-loop execution.
                 </p>
               </div>
             </article>
